@@ -1,5 +1,7 @@
 package studio5;
 
+import java.awt.Color;
+
 import edu.princeton.cs.introcs.StdDraw;
 
 public class Methods {
@@ -15,8 +17,9 @@ public class Methods {
 	 */
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
 		double distance = 0;
+		distance = (x2 - x1)*(x2 - x1) + (y2 - y1)*(y2-y1);
+		distance = Math.sqrt(distance);
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
-		
 		return distance;
 	}
 
@@ -30,6 +33,17 @@ public class Methods {
 	public static void drawBullsEye(double x, double y, double radius) {
 		StdDraw.setPenColor(StdDraw.BLACK);
 		StdDraw.filledCircle(x, y, radius);
+		Color lightBlue = new Color(0,109,219);
+		StdDraw.setPenColor(lightBlue);
+		StdDraw.filledCircle(x, y, 3*radius/4);
+		Color lightRed = new Color(146,0,0);
+		StdDraw.setPenColor(lightRed);
+		StdDraw.filledCircle(x, y, radius/2);
+		Color lightYellow = new Color(255,255,109);
+		StdDraw.setPenColor(lightYellow);
+		StdDraw.filledCircle(x, y, radius/4);
+	}
+		
 
 		// TODO: Draw the remaining rings of the bull's eye
 		// Blue ring with 3.0/4.0 the radius
@@ -46,7 +60,7 @@ public class Methods {
 		// suggested rgb values: 255, 255, 109
 
 		
-	}
+	
 
 	/**
 	 * Return a new String which is the original source String with all occurrences
@@ -60,6 +74,7 @@ public class Methods {
 	 *         characters in the source String with the replacement String
 	 */
 	public static String substituteAll(String source, char target, String replacement) {
+		
 		String result = "";
 		// TODO: Finish this method
 		

@@ -74,6 +74,12 @@ public class Methods {
 	 *         characters in the source String with the replacement String
 	 */
 	public static String substituteAll(String source, char target, String replacement) {
+		char [] name = source.toCharArray() ;
+		for ( int i = 0; i > name.length; i ++) {
+			if (name[i] == target) {
+				
+			}
+		}
 		
 		String result = "";
 		// TODO: Finish this method
